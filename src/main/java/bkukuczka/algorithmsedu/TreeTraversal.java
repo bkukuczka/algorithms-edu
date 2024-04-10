@@ -4,11 +4,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
-class GraphTraversal {
+class TreeTraversal {
 
-    List<Integer> postorder(GraphNode<Integer> root) {
+    List<Integer> postorder(TreehNode<Integer> root) {
         LinkedList<Integer> result = new LinkedList<>();
-        Stack<GraphNode<Integer>> stack = new Stack<>();
+        Stack<TreehNode<Integer>> stack = new Stack<>();
 
         if (root == null) {
             return result;
@@ -17,11 +17,18 @@ class GraphTraversal {
         stack.push(root);
 
         while (!stack.isEmpty()) {
-            GraphNode<Integer> node = stack.pop();
+            TreehNode<Integer> node = stack.pop();
             result.addFirst(node.value);
 
             stack.addAll(node.children);
         }
+
+        return result;
+    }
+
+    List<Integer> inorder(TreehNode<Integer> root) {
+        LinkedList<Integer> result = new LinkedList<>();
+
 
         return result;
     }
