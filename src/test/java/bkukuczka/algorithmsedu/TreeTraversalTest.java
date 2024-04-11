@@ -12,6 +12,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class TreeTraversalTest {
 
+    /**
+     *              1
+     *           /  |  \
+     *          3   2   4
+     *        /  \
+     *       5    6
+     */
     @Test
     void postorderTraversal() {
         //given
@@ -55,5 +62,31 @@ class TreeTraversalTest {
 
         //then
         assertThat(result).isEqualTo(List.of(6, 4, 5, 1, 3, 2));
+    }
+
+    /**
+     *              1
+     *           /  |  \
+     *          3   2   4
+     *        /  \
+     *       5    6
+     */
+    @Test
+    void preorderTraversal() {
+        //given
+        TreeNode<Integer> node6 = new TreeNode<>(6, emptyList());
+        TreeNode<Integer> node5 = new TreeNode<>(5, emptyList());
+        TreeNode<Integer> node4 = new TreeNode<>(4, emptyList());
+        TreeNode<Integer> node3 = new TreeNode<>(3, List.of(node5, node6));
+        TreeNode<Integer> node2 = new TreeNode<>(2, emptyList());
+        TreeNode<Integer> node1 = new TreeNode<>(1, List.of(node3, node2, node4));
+
+        TreeTraversal algo = new TreeTraversal();
+
+        //when
+        List<Integer> result = algo.preorder(node1);
+
+        //then
+        assertThat(result).isEqualTo(List.of(1, 3, 5, 6, 2, 4));
     }
 }
