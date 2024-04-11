@@ -14,7 +14,9 @@ class ReverseIntegerTest {
                 Arguments.of(0, 0),
                 Arguments.of(123, 321),
                 Arguments.of(-123, -321),
-                Arguments.of(190, 91)
+                Arguments.of(190, 91),
+                Arguments.of(2147483647, 0),
+                Arguments.of(-2147483648, 0)
         );
     }
 
