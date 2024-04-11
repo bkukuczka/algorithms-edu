@@ -11,12 +11,9 @@ class InvertBinaryTree {
             return null;
         }
 
-        var left = root.left;
-        root.left = root.right;
+        var left = invertTree(root.left);
+        root.left = invertTree(root.right);
         root.right = left;
-
-        invertTree(root.left);
-        invertTree(root.right);
 
         return root;
     }
