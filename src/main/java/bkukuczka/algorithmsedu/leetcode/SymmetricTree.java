@@ -16,10 +16,6 @@ class SymmetricTree {
             return false;
         }
 
-        if (one.value != two.value) {
-            return false;
-        }
-
-        return isMirror(one.left, two.right) && isMirror(one.right, two.left);
+        return one.value == two.value && isMirror(one.left, two.right) && isMirror(one.right, two.left);
     }
 }
