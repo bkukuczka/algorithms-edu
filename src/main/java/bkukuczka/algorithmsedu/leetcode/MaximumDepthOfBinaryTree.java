@@ -8,20 +8,9 @@ class MaximumDepthOfBinaryTree {
             return 0;
         }
 
-        var maxDepthLeft = maximumDepth(node.left, 1);
-        var maxDepthRight = maximumDepth(node.right, 1);
+        var maxDepthLeft = maxDepth(node.left);
+        var maxDepthRight = maxDepth(node.right);
 
-        return Math.max(maxDepthLeft, maxDepthRight);
-    }
-
-    private int maximumDepth(BinaryTreeNode<Integer> node, int depth) {
-        if (node == null) {
-            return depth;
-        }
-
-        var maxDepthLeft = maximumDepth(node.left, depth + 1);
-        var maxDepthRight = maximumDepth(node.right, depth + 1);
-
-        return Math.max(maxDepthLeft, maxDepthRight);
+        return Math.max(maxDepthLeft, maxDepthRight) + 1;
     }
 }
