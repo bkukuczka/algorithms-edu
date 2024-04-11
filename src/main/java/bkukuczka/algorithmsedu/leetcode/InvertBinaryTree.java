@@ -8,12 +8,14 @@ class InvertBinaryTree {
     BinaryTreeNode<Integer> invertTree(BinaryTreeNode<Integer> root) {
 
         if (Objects.isNull(root)) {
-            return null;
+            return root;
         }
 
         var left = invertTree(root.left);
-        root.left = invertTree(root.right);
+        var right = invertTree(root.right);
+
         root.right = left;
+        root.left = right;
 
         return root;
     }
