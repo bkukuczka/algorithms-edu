@@ -1,10 +1,37 @@
 package bkukuczka.algorithmsedu;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class PalindromeTest {
+
+    public static Stream<Arguments> stringPalindromeTestData() {
+        return Stream.of(
+                Arguments.of("aabaa", true),
+                Arguments.of("a", true),
+                Arguments.of("aa", true),
+                Arguments.of("abc", false)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("stringPalindromeTestData")
+    void isStringPalindrome(String input, boolean expectedResult) {
+        //given
+        Palindrome algo = new Palindrome();
+
+        //when
+        boolean result = algo.isStringPalindrome(input);
+
+        //then
+        assertThat(result).isEqualTo(expectedResult);
+    }
 
     @Test
     void testIsPalindrome() {

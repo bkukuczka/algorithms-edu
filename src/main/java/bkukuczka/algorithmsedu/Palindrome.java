@@ -1,6 +1,11 @@
 package bkukuczka.algorithmsedu;
 
 class Palindrome {
+
+    boolean isStringPalindrome(String s) {
+        return new StringBuilder(s).reverse().toString().equals(s);
+    }
+
     boolean isPalindrome(ListNode<Integer> head) {
         ListNode<Integer> slow = head;
         ListNode<Integer> fast = head;
