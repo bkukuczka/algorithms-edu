@@ -26,5 +26,4 @@ class LargestValueInTreeRowTest {
         assertThat(result.get(1)).isEqualTo(3);
         assertThat(result.get(2)).isEqualTo(9);
     }
-
 }
