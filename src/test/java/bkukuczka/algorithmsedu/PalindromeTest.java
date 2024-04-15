@@ -1,5 +1,6 @@
 package bkukuczka.algorithmsedu;
 
+import bkukuczka.algorithmsedu.commons.ListNode;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -36,12 +37,12 @@ class PalindromeTest {
     @Test
     void testIsPalindrome() {
         //given
-        ListNode<Integer> node5 = new ListNode<>(null, 1);
-        ListNode<Integer> node4 = new ListNode<>(node5, 2);
-        ListNode<Integer> node3 = new ListNode<>(node4, 3);
-        ListNode<Integer> node2 = new ListNode<>(node3, 3);
-        ListNode<Integer> node1 = new ListNode<>(node2, 2);
-        ListNode<Integer> head = new ListNode<>(node1, 1);
+        ListNode<Integer> node5 = new ListNode<>(1, null);
+        ListNode<Integer> node4 = new ListNode<>(2, node5);
+        ListNode<Integer> node3 = new ListNode<>(3, node4);
+        ListNode<Integer> node2 = new ListNode<>(3, node3);
+        ListNode<Integer> node1 = new ListNode<>(2, node2);
+        ListNode<Integer> head = new ListNode<>(1, node1);
 
         Palindrome algo = new Palindrome();
 
@@ -55,11 +56,11 @@ class PalindromeTest {
     @Test
     void testIsPalindromeOddNumber() {
         //given
-        ListNode<Integer> node4 = new ListNode<>(null, 1);
-        ListNode<Integer> node3 = new ListNode<>(node4, 2);
-        ListNode<Integer> node2 = new ListNode<>(node3, 3);
-        ListNode<Integer> node1 = new ListNode<>(node2, 2);
-        ListNode<Integer> head = new ListNode<>(node1, 1);
+        ListNode<Integer> node4 = new ListNode<>(1, null);
+        ListNode<Integer> node3 = new ListNode<>(2, node4);
+        ListNode<Integer> node2 = new ListNode<>(3, node3);
+        ListNode<Integer> node1 = new ListNode<>(2, node2);
+        ListNode<Integer> head = new ListNode<>(1, node1);
 
         Palindrome algo = new Palindrome();
 
@@ -73,12 +74,12 @@ class PalindromeTest {
     @Test
     void testIsNotPalindrome() {
         //given
-        ListNode<Integer> node5 = new ListNode<>(null, 1);
-        ListNode<Integer> node4 = new ListNode<>(node5, 2);
-        ListNode<Integer> node3 = new ListNode<>(node4, 3);
-        ListNode<Integer> node2 = new ListNode<>(node3, 2);
-        ListNode<Integer> node1 = new ListNode<>(node2, 3);
-        ListNode<Integer> head = new ListNode<>(node1, 1);
+        ListNode<Integer> node5 = new ListNode<>(1, null);
+        ListNode<Integer> node4 = new ListNode<>(2, node5);
+        ListNode<Integer> node3 = new ListNode<>(3, node4);
+        ListNode<Integer> node2 = new ListNode<>(2, node3);
+        ListNode<Integer> node1 = new ListNode<>(3, node2);
+        ListNode<Integer> head = new ListNode<>(1, node1);
 
         Palindrome algo = new Palindrome();
 

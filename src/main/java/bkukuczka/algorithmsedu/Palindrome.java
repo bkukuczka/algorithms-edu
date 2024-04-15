@@ -1,5 +1,7 @@
 package bkukuczka.algorithmsedu;
 
+import bkukuczka.algorithmsedu.commons.ListNode;
+
 class Palindrome {
 
     boolean isStringPalindrome(String s) {
