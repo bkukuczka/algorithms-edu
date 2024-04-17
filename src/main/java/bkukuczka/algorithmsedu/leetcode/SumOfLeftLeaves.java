@@ -16,7 +16,9 @@ class SumOfLeftLeaves {
 
             if (current.left != null) {
                 queue.offer(current.left);
-                sum += current.left.value;
+                if (current.left.left == null && current.left.right == null) {
+                    sum += current.left.value;
+                }
             }
 
             if (current.right != null) {
