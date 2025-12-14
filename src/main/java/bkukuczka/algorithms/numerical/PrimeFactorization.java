@@ -28,7 +28,7 @@ class PrimeFactorization {
             factor += 2;
         }
 
-        if (number != 1) {
+        if (number > 1) {
             result.add(number);
         }
 

@@ -14,7 +14,8 @@ class PrimeFactorizationTest {
         return Stream.of(
                 Arguments.of(204, List.of(2, 2, 3, 17)),
                 Arguments.of(336, List.of(2, 2, 2, 2, 3, 7)),
-                Arguments.of(120, List.of(2, 2, 2, 3, 5))
+                Arguments.of(120, List.of(2, 2, 2, 3, 5)),
+                Arguments.of(113, List.of(113))
         );
     }
 
