@@ -1,4 +1,4 @@
-package bkukuczka.algorithms;
+package bkukuczka.algorithms.sort;
 
 class QuickSort {
     int[] sort(int[] arr) {

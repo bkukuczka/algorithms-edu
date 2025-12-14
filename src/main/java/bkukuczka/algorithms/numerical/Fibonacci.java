@@ -1,4 +1,4 @@
-package bkukuczka.algorithms;
+package bkukuczka.algorithms.numerical;
 
 class Fibonacci {
     long fib(int n) {

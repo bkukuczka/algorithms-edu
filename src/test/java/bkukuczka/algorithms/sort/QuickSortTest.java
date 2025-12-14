@@ -1,4 +1,4 @@
-package bkukuczka.algorithms;
+package bkukuczka.algorithms.sort;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

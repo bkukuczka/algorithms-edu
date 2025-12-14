@@ -1,5 +1,6 @@
-package bkukuczka.algorithms;
+package bkukuczka.algorithms.numerical;
 
+import bkukuczka.algorithms.numerical.Fibonacci;
 import org.apache.commons.lang3.time.StopWatch;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

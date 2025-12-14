@@ -1,4 +1,4 @@
-package bkukuczka.algorithms;
+package bkukuczka.algorithms.tree;
 
 import bkukuczka.algorithms.commons.BinaryTreeNode;
 import bkukuczka.algorithms.commons.TreeNode;

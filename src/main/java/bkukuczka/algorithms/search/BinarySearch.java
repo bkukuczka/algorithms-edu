@@ -1,4 +1,4 @@
-package bkukuczka.algorithms;
+package bkukuczka.algorithms.search;
 
 class BinarySearch {
     int findValueIndex(int[] arr, int value) {

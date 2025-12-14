@@ -1,5 +1,6 @@
-package bkukuczka.algorithms;
+package bkukuczka.algorithms.sort;
 
+import bkukuczka.algorithms.sort.MergeSort;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

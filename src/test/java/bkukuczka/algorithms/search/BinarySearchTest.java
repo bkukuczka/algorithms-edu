@@ -1,5 +1,6 @@
-package bkukuczka.algorithms;
+package bkukuczka.algorithms.search;
 
+import bkukuczka.algorithms.search.BinarySearch;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
